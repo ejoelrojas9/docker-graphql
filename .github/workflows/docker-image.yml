@@ -42,7 +42,7 @@ jobs:
         docker build -t ejoelrojas9/docker-graphql:latest .
 
     - name: Push Docker Image
-       env:
+      env:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
         docker push ejoelrojas9/docker-graphql:$NEW_VERSION
